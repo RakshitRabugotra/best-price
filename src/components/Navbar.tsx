@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className='absolute bottom-0 left-0 right-0 inline-flex justify-between p-8'>
       <NavLink className={navLinkState} to='/'>
         Home
       </NavLink>

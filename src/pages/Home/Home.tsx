@@ -1,3 +1,5 @@
+import Card from '@/components/Carousel/Card'
+import Carousel from '@/components/Carousel/Carousel'
 import Heading from '@/components/Heading'
 
 // Custom Hooks
@@ -8,5 +10,12 @@ export default function App() {
   useTitle('Home')
 
   // Return the rendering part
-  return <Heading>Hello, World! - Home page</Heading>
+  return (
+    <>
+      <Heading>Hello, World! - Home page</Heading>
+      <Carousel>
+        <Card heading='Apple iPad Air'></Card>
+      </Carousel>
+    </>
+  )
 }
