@@ -10,21 +10,28 @@ import Home from '@/pages/Home/Home'
 import ErrorPage from '@/pages/Error'
 import Profile from './pages/Account/Profile'
 import ProfileSettings from '@/pages/Account/Settings'
+import Layout from './pages/Layout'
 
 /* Router instance */
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: 'profile/',
-    element: <Profile />,
-  },
-  {
-    path: 'setting/',
-    element: <ProfileSettings />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: 'profile/',
+        element: <Profile />,
+      },
+      {
+        path: 'settings/',
+        element: <ProfileSettings />,
+      },
+    ],
   },
 ])
 
